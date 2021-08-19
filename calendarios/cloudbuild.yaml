@@ -20,5 +20,6 @@ steps:
    - 'managed'
    - '--port'
    - '4200'
+   - '--allow-unauthenticated'
 images:
  - 'gcr.io/runsclourtest/frontend:$COMMIT_SHA'
