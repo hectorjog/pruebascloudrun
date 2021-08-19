@@ -18,5 +18,7 @@ steps:
    - 'us-central1'
    - '--platform'
    - 'managed'
+   - 'port'
+   - '4200'
 images:
  - 'gcr.io/runsclourtest/frontend:$COMMIT_SHA'
