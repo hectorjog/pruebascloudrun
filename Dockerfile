@@ -8,9 +8,8 @@ COPY requirements.txt .
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 RUN pip install Flask
 RUN pip install flask-cors
-
-EXPOSE 5000
 # Copy the rest of the working directory contents into the container at /app
 COPY . .
+EXPOSE 5000
 # Run app.py when the container launches
 CMD ["python", "RestService.py"]
