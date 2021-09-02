@@ -12,4 +12,4 @@ RUN pip install flask-cors
 # Copy the rest of the working directory contents into the container at /app
 COPY . .
 # Run app.py when the container launches
-ENTRYPOINT ["python", "app.py"]
+CMD ["python", "RestService.py"]

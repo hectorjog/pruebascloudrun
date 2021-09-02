@@ -22,16 +22,12 @@ Method post
 return the new dictonary 
 """
 @app.route("/v1/create",methods=["GET",'POST'])
-#@cross_origin(origin='http://localhost:4200')
 def create():
     if request.method == "POST":
        #brand=request.form["brand"]
       newDict = request.get_json()
      
       
-      #brand = request.args.get("brand")
-      #model = request.args.get("model")
-      #year= request.args.get("year") 
        
  
     return   jsonify(newDict)
@@ -77,33 +73,5 @@ def user():
     user_dict = request.args.get("id")
     return jsonify(user_dict)
     
-"""
 
-
- #user= request.get_json()
-           
-primera forma
-@app.route("/datos/<elnombre>", methods=['POST'])
-def datos(elnombre):
-    print(elnombre )
-    thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-   }
-    return  f'User {elnombre}'
-    """
-"""
-esto es para el cors tal como el de node
-@app.after_request
-def add_headers(response):
-    response.headers.add('Content-Type', 'application/json')
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:4200')
-    response.headers.add('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS')
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-    response.headers.add('Access-Control-Expose-Headers', 'Content-Type,Content-Length,Authorization,X-Pagination')
-    return response"""
-"""Ahora, para iniciar la aplicación, debemos verificar que el archivo ejecutado sea el programa principal o no."""
-if __name__ == '__main__':
-    """Con el debug true hace lo mismo que el nodemon"""
     app.run(debug=True)
