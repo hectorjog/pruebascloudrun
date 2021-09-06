@@ -67,11 +67,6 @@ def delete(id):
        
     return f'{ thisdict }'
 
+if _name_ == '_main_':
 
-@app.route("/user",methods=['POST'])
-def user():
-    user_dict = request.args.get("id")
-    return jsonify(user_dict)
-    
-
-    app.run(host='0.0.0.0',port=8080,debug=True)
+    app.run(host='0.0.0.0',8080,debug=True)
