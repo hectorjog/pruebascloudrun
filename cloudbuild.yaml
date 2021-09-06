@@ -19,7 +19,7 @@ steps:
    - "--platform"
    - "managed"
    - "--port"
-   - "8080"
+   - "5000"
 
 images:
 - gcr.io/runsclourtest/backpy
