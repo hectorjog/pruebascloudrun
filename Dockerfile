@@ -8,6 +8,7 @@ COPY requirements.txt .
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 RUN pip install Flask
 RUN pip install flask-cors
+RUN pip install waitress
 # Copy the rest of the working directory contents into the container at /app
 COPY . .
 ENV PORT 5000
