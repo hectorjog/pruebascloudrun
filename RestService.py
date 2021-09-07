@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS #, se usa para definr del cors cross_origin
 from flask import Flask, jsonify
 from flask import request
+from waitress import serve
 
 app = Flask(__name__)
 CORS(app)
@@ -68,4 +69,4 @@ def delete(id):
     return f'{ thisdict }'
     
 if __name__ == '__main__':
-   app.run(host='0.0.0.0',port=5000,debug=True)
+   serve(app, host='0.0.0.0', port=5000)
