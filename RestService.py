@@ -62,11 +62,9 @@ return the dictionary without the removed value
 @app.route("/v1/delete/<int:id>",methods=['POST','DELETE'])
 
 def delete(id):
-
     if request.method == 'POST':
-         thisdict.pop("year")
-       
-    return f'{ thisdict }'
+         thisdict.pop("year")       
+    return jsonify(thisdict)
     
 if __name__ == '__main__':
    serve(app, host='0.0.0.0', port=5000)
