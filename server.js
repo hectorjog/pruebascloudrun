@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-app.use(express.static('dist/angular-for-python-backend'));
+app.use(express.static('dist/'));
 app.get('/', function (req, res,next) {
 res.redirect('/'); 
 });
