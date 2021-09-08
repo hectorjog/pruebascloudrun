@@ -7,7 +7,9 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class RestServiceService {
 
-  REST_API: string ='http://localhost:5000';
+  REST_API: string ='https://backpy-vigxsmwe2a-uc.a.run.app';
+  
+
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private httpClient: HttpClient) { }
 
@@ -57,31 +59,20 @@ console.log("estas es las rura "+API+" y estos son los datos "+datos);
     )
 
   }     
-
-  /*sendtocalendar(dato) :Observable<any> {
-    console.log(dato);
-    let API=`${this.REST_API}/create/`;
-
-    return this.httpClient.post(API,dato,{headers:this.httpHeaders}) .pipe(
-      map((data:any) => {    
+  delete(datos:any) :Observable<any> {
+  
+    let API=`${this.REST_API}/v1/delete/`+datos.year;
+//return datos
+    return this.httpClient.post(API,datos,{headers:this.httpHeaders}) .pipe(
+      map((data:any) => { 
+        
         return data;
       }), catchError( error => {
-        return throwError( 'Ocurrio un problema.' );
+        return throwError( 'Ocurrio un problema.'+ JSON.stringify(error) );
       })
     )
 
   }     
-  handleError(error: HttpErrorResponse) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Handle client error
-      errorMessage = error.error.message;
-    } else {
-      // Handle server error
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    console.log(errorMessage);
-    return throwError(errorMessage);
-  }*/
+  
 
 }

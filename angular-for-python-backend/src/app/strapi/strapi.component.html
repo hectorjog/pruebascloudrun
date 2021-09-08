@@ -1,0 +1,10 @@
+
+ <h1 *ngIf="errores; else elseBlock">{{errores}}</h1>
+
+<ng-template #elseBlock>
+    <ul>
+    <li *ngFor="let data of datas">
+    
+        {{data | json }}
+    </li>
+    </ul></ng-template>

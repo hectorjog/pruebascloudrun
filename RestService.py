@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS #, se usa para definr del cors cross_origin
 from flask import Flask, jsonify
 from flask import request
+from waitress import serve
 
 app = Flask(__name__)
 CORS(app)
@@ -61,11 +62,9 @@ return the dictionary without the removed value
 @app.route("/v1/delete/<int:id>",methods=['POST','DELETE'])
 
 def delete(id):
-
     if request.method == 'POST':
-         thisdict.pop("year")
-       
-    return f'{ thisdict }'
+         thisdict.pop("year")       
+    return jsonify(thisdict)
     
 if __name__ == '__main__':
-   app.run(host='0.0.0.0',port=8080,debug=True)
+   serve(app, host='0.0.0.0', port=5000)
