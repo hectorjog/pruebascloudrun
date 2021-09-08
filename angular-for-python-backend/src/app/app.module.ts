@@ -12,6 +12,7 @@ import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FormBuilder } from '@angular/forms';
 import { StrapiComponent } from './strapi/strapi.component';
+import { DeleteComponent } from './delete/delete.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { StrapiComponent } from './strapi/strapi.component';
     ElpostComponent,
     UpdateComponent,
     HomeComponent,
-    StrapiComponent
+    StrapiComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
