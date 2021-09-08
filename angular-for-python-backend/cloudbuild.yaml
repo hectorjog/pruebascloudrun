@@ -21,4 +21,4 @@ steps:
    - "--port"
    - "4200"
 images:
-- gcr.io/runsclourtest/frontpy
+- gcr.io/runsclourtest/frontpy 
