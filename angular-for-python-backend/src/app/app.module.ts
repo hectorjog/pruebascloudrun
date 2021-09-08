@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FormBuilder } from '@angular/forms';
+import { StrapiComponent } from './strapi/strapi.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormBuilder } from '@angular/forms';
     ElgetComponent,
     ElpostComponent,
     UpdateComponent,
-    HomeComponent
+    HomeComponent,
+    StrapiComponent
   ],
   imports: [
     BrowserModule,

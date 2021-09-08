@@ -7,7 +7,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class RestServiceService {
 
-  REST_API: string ='http://localhost:5000';
+  REST_API: string ='https://backpy-vigxsmwe2a-uc.a.run.app';
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private httpClient: HttpClient) { }
 

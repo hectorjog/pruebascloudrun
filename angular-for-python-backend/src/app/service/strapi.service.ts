@@ -19,7 +19,7 @@ export class StrapiService {
       
         return data;
       }), catchError( error => {
-        return throwError( 'Ocurrio un problema.' );
+        return throwError(error);
       })
     )
     
