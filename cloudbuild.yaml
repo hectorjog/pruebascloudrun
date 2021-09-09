@@ -10,7 +10,6 @@ steps:
    args: 
    - "run"
    - "deploy"
-   - "--allow-unauthenticated"
    - "frontpy"
    - "--image"
    - "gcr.io/runsclourtest/frontpy"
@@ -20,5 +19,4 @@ steps:
    - "managed"
    - "--port"
    - "4200"
-images:
-- gcr.io/runsclourtest/frontpy 
+   - "--allow-unauthenticated"
